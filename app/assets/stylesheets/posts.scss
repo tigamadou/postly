@@ -3,12 +3,9 @@
     max-width: 500px;
 }
 
-.posts{
-    
-    .post{
-        border: 1px solid #f1f1f1;
-        &:first-child{
-            border-bottom: 0px;
-        }
+.post{
+    border: 1px solid #f1f1f1;
+    &:first-child{
+        border-bottom: 0px;
     }
 }

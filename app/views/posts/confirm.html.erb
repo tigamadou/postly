@@ -1,0 +1,28 @@
+<div class="container py-5">
+
+    <div class="alert alert-warning">
+        <h3>Send with the following contents.</h3>
+    </div>
+    <%= form_with(model: @post, url: posts_path, local: true) do |form| %>
+        <%= form.hidden_field :content %>
+        <li class="post d-flex p-3  mb-4">
+            <div><%= @post.content %></div>
+        </li>
+        <div class="actions d-flex justify-content-between">
+            
+            <%= link_to(:back)  do %>
+                <div class="btn btn-light">
+                    <i class="bi bi-chevron-compact-left"></i> Return
+                </div>
+            <% end%>
+
+            
+                <button type="submit" class="btn btn-info">
+                    <i class="bi bi-check-lg"></i> Publish
+                </button>
+          
+            
+        </div>
+    <% end %>
+
+</div>
