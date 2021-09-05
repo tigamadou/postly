@@ -4,7 +4,16 @@
     <%= form.label :content %>
   </div>
 
-  <div class="actions d-flex justify-content-end">
+  <div class="actions d-flex justify-content-between">
+  <%= link_to(posts_path)  do %>
+      <div class="btn btn-light">
+          <i class="bi bi-chevron-compact-left"></i> Back
+      </div>
+  <% end%>
+  <% if action_name == "new"%>
     <%= form.submit 'Publish' , :class => "btn btn-info" %>
+  <% else %>
+    <%= form.submit 'Save' , :class => "btn btn-info" %>
+  <% end %>
   </div>
 <% end %>

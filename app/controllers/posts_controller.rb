@@ -26,9 +26,23 @@ class PostsController < ApplicationController
         end
     end
 
+    def edit
+    end
+
+    def update
+        respond_to do |format|
+          if @post.update(post_params)
+            format.html { redirect_to posts_path, notice: "Post was successfully updated." }
+            
+          else
+            format.html { render :edit, status: :unprocessable_entity }
+          end
+        end
+      end
+
     private
     def set_post
-      @blog = Blog.find(params[:id])
+      @post = Post.find(params[:id])
     end
 
     def post_params
