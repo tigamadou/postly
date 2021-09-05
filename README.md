@@ -1,4 +1,12 @@
 # Postly
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+![](https://github.com/tigamadou/postly/workflows/Linters/badge.svg)
+
 Simple Tweeter like implementation with Ruby On Rails
 
 ## Built With
@@ -64,9 +72,25 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- [Microverse](https://microverse.org)
 - [The Oddin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication)
 
 ## 📝 License
 
 This project is [MIT](lic.url) licensed.
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/tigamadou/postly.svg?style=flat-square
+[contributors-url]: https://github.com/tigamadou/postly/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/tigamadou/postly.svg?style=flat-square
+[forks-url]: https://github.com/tigamadou/postly/network/members
+[stars-shield]: https://img.shields.io/github/stars/tigamadou/postly.svg?style=flat-square
+[stars-url]: https://github.com/tigamadou/postly/stargazers
+[issues-shield]: https://img.shields.io/github/issues/tigamadou/postly.svg?style=flat-square
+[issues-url]: https://github.com/tigamadou/postly/issues
+[license-shield]: https://img.shields.io/github/license/tigamadou/postly.svg?style=flat-square
+[license-url]: https://github.com/tigamadou/postly/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/amadou-ibrahim
+[product-screenshot]: images/screenshot.png
+
