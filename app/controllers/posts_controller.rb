@@ -38,7 +38,14 @@ class PostsController < ApplicationController
             format.html { render :edit, status: :unprocessable_entity }
           end
         end
-      end
+    end
+    def destroy
+        @post.destroy
+        respond_to do |format|
+          format.html { redirect_to posts_path, notice: "Post was successfully deleted." }
+          
+        end
+    end
 
     private
     def set_post
