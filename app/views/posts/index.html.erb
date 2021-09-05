@@ -11,8 +11,8 @@
     </div>
     <ul class="posts list-unstyled p-0 ">
         <% @posts.order(created_at: :desc).each do |post| %>
-            <li class="post d-flex p-3  py-4">
-                <div ><%= post.content %></div>
+            <li class="post  p-3  py-4">
+                 <%= render 'single', post: post %>
             </li>
         <% end %>
     </ul>
