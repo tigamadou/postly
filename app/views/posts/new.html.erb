@@ -3,7 +3,6 @@
     <% if @post.errors.any? %>
     <div class="alert alert-danger">
       <div><%= pluralize(@post.errors.count, "error") %> prohibited this @post from being saved:</div>
-
       <ul>
       <% @post.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -14,6 +13,5 @@
     <div class="mb-4">
         <%= render 'form', post: @post %>
     </div>
-   
 </div>
 

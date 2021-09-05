@@ -1,11 +1,10 @@
 <div class="container py-5">
     <% if notice %>
-    <p id="notice" class="alert alert-success"><%= notice %></p>
+        <p id="notice" class="alert alert-success"><%= notice %></p>
     <% end %>
     <div class="d-flex justify-content-between">
         <h1>Home</h1>
         <div>
-            
             <%= link_to(new_post_path) do %>
                 <span class="btn btn-info" title="Create">
                     <i class="bi bi-plus-lg"></i> Create
@@ -16,9 +15,7 @@
     <% if @posts.count > 0 %>
     <div class="posts  p-0 ">
         <% @posts.order(created_at: :desc).each do |post| %>
-            
-                 <%= render 'single', post: post %>
-            
+            <%= render 'single', post: post %>
         <% end %>
     </div>
     <% else%>
@@ -26,6 +23,5 @@
             Empty
         </div>
     <% end %>
-
 </div>
 

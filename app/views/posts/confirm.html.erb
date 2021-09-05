@@ -8,17 +8,11 @@
         <li class="post d-flex p-3  mb-4 border rounded">
             <div><%= @post.content %></div>
         </li>
-        <div class="actions d-flex justify-content-between">
-            
-            <%= form.submit "Return", name: 'back', class: 'btn btn-light' %>
-
-            
-                <button type="submit" class="btn btn-info">
-                    <i class="bi bi-check-lg"></i> Publish
-                </button>
-          
-            
+        <div class="actions d-flex justify-content-between">            
+            <%= form.submit "Return", name: 'back', class: 'btn btn-light' %>            
+            <button type="submit" class="btn btn-info">
+                <i class="bi bi-check-lg"></i> Publish
+            </button>
         </div>
     <% end %>
-
 </div>
