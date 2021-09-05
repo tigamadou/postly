@@ -1,24 +1,18 @@
 <div class="container">
 
-    <p id="notice"><%= notice %></p>
+    <p id="notice" class="alert alert-success"><%= notice %></p>
 
     <h1>Posts</h1>
     <div class="mb-4">
         <%= render 'form', post: @post %>
     </div>
     <ul class="posts list-unstyled p-0 ">
-        <% @posts.each do |post| %>
+        <% @posts.order(created_at: :desc).each do |post| %>
             <li class="post d-flex p-3  py-4">
                 <%= image_tag 'https://www.gravatar.com/avatar/HASH', size: "48x48", alt: "Profile picture", :class => "me-3" %>
                 <div ><%= post.content %></div>
             </li>
         <% end %>
-        <li class="post d-flex p-3  ">
-            <%= image_tag 'https://www.gravatar.com/avatar/HASH', size: "48x48", alt: "Profile picture", :class => "me-3" %>
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <i>Quamquam te quidem video minime esse deterritum.</i> Virtutis, magnitudinis animi, patientiae, fortitudinis fomentis dolor mitigari solet. Illum mallem levares, quo optimum atque humanissimum virum, Cn.  </p>
-            </div>
-        </li>
     </ul>
 
 </div>
