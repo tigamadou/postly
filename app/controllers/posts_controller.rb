@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
     def confirm
         @post = Post.new(post_params)
+        render :new if @post.invalid?
     end
 
     def new
@@ -16,13 +17,16 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params)
-    
-        respond_to do |format|
-          if @post.save
-            format.html { redirect_to posts_path, notice: "Post was successfully created." }
-          else
-            format.html { render :new, status: :unprocessable_entity }
-          end
+        if params[:back]
+            render :new
+        else
+            respond_to do |format|
+              if @post.save
+                format.html { redirect_to posts_path, notice: "Post was successfully created." }
+              else
+                format.html { render :new, status: :unprocessable_entity }
+              end
+            end
         end
     end
 
