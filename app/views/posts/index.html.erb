@@ -6,16 +6,27 @@
     
         <h1>Posts</h1>
         <div>
-            <%= link_to "Create", new_post_path, :class => "btn btn-success" %>
+            
+            <%= link_to(new_post_path) do %>
+                <span class="btn btn-info" title="Create">
+                    <i class="bi bi-plus-lg"></i> Create
+                </span>
+            <% end %>
         </div>
     </div>
-    <ul class="posts list-unstyled p-0 ">
+    <% if @posts.count > 0 %>
+    <div class="posts  p-0 ">
         <% @posts.order(created_at: :desc).each do |post| %>
-            <li class="post  p-3  py-4">
+            
                  <%= render 'single', post: post %>
-            </li>
+            
         <% end %>
-    </ul>
+    </div>
+    <% else%>
+        <div class="alert alert-info" role="alert">
+            Empty
+        </div>
+    <% end %>
 
 </div>
 

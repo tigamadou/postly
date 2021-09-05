@@ -1,6 +1,6 @@
 <%= form_with(model: post, local: true, url: choose_new_or_edit ) do |form| %>
   <div class="form-floating mb-2">
-    <%= form.text_area :content, :class => "form-control", placeholder: "Leave a comment here", style: "height: 100px", required: true %>
+    <%= form.text_area :content, :class => "form-control", placeholder: "Leave a comment here", style: "height: 100px", required: true, maxlength: 140 %>
     <%= form.label :content %>
   </div>
 
@@ -11,7 +11,10 @@
       </div>
   <% end%>
   <% if action_name == "new"%>
-    <%= form.submit 'Publish' , :class => "btn btn-info" %>
+  <button type="submit" class="btn btn-info">
+    <i class="bi bi-check-lg"></i> Publish
+  </button>
+    
   <% else %>
     <%= form.submit 'Save' , :class => "btn btn-info" %>
   <% end %>
