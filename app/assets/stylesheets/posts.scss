@@ -8,4 +8,15 @@
     &:first-child{
         border-bottom: 0px;
     }
+    .actions{
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all 0.25s ease-in-out;
+        display: none;
+    }
+    &:hover .actions{
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

@@ -1,5 +1,5 @@
-<div class="mb-3"><%= post.content %></div>
-<div class="d-flex">
+<div class="mb-1"><%= post.content %></div>
+<div class="d-flex actions">
     <%= link_to(edit_post_path post) do %>
         <span class="badge rounded-pill bg-light text-dark" title="Edit">
             <i class="bi bi-pencil"></i> Edit
@@ -8,7 +8,7 @@
 
     
     <a title="Edit" data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/posts/21"> 
-        <span class="badge rounded-pill bg-light text-dark">
+        <span class="badge rounded-pill bg-light text-danger">
 
         <i class="bi bi-x-lg"></i> Delete
         </span>
